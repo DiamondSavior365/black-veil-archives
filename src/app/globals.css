@@ -1,26 +1,196 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #020202;
+  --foreground: #f8f5f2;
+  --blood: #7f0000;
+  --blood-dark: #3f0000;
+  --blood-bright: #dc2626;
+  --ash: #a1a1aa;
+  --charcoal: #09090b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(
+      circle at top left,
+      rgba(127, 0, 0, 0.28),
+      transparent 34rem
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(69, 10, 10, 0.18),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(127, 29, 29, 0.2),
+      transparent 35rem
+    ),
+    linear-gradient(180deg, #030303 0%, #000000 45%, #050101 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: rgba(185, 28, 28, 0.85);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+.blood-stain {
+  position: relative;
+  overflow: hidden;
+}
+
+.blood-stain::before {
+  content: "";
+  position: absolute;
+  top: 9%;
+  left: 2%;
+  width: 58rem;
+  height: 34rem;
+  background: radial-gradient(
+      circle at 18% 30%,
+      rgba(185, 28, 28, 0.22),
+      transparent 13%
+    ),
+    radial-gradient(circle at 36% 44%, rgba(127, 0, 0, 0.25), transparent 16%),
+    radial-gradient(circle at 60% 25%, rgba(153, 27, 27, 0.18), transparent 13%),
+    radial-gradient(circle at 76% 58%, rgba(69, 10, 10, 0.28), transparent 18%);
+  filter: blur(18px);
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blood-stain::after {
+  content: "";
+  position: absolute;
+  top: 21%;
+  left: 7%;
+  width: 30rem;
+  height: 0.22rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(127, 0, 0, 0.85),
+    rgba(220, 38, 38, 0.65),
+    transparent
+  );
+  box-shadow: 6rem 1.7rem 0 rgba(127, 0, 0, 0.36),
+    14rem 4.4rem 0 rgba(153, 27, 27, 0.28), 22rem 7.2rem 0 rgba(69, 10, 10, 0.5);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.horror-card {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 0 45px rgba(127, 0, 0, 0.12);
+}
+
+.text-blood-glow {
+  text-shadow: 0 0 18px rgba(185, 28, 28, 0.35), 0 0 42px rgba(127, 0, 0, 0.25);
+}
+
+.blood-mark {
+  position: relative;
+}
+
+.blood-mark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.2rem;
+  width: 8.5rem;
+  height: 0.18rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(220, 38, 38, 0.95),
+    rgba(127, 0, 0, 0.75),
+    transparent
+  );
+  box-shadow: 2.4rem 0.65rem 0 -1px rgba(127, 0, 0, 0.75),
+    5.8rem 1.15rem 0 -1px rgba(69, 10, 10, 0.9);
+}
+.headline-blood-wrap {
+  isolation: isolate;
+}
+
+.headline-blood-overlay {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.2rem;
+  width: min(34rem, 82%);
+  height: 5.8rem;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.95;
+  background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(220, 38, 38, 0.95) 8%,
+      rgba(127, 0, 0, 0.9) 22%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 9% 24%,
+      rgba(220, 38, 38, 0.95) 0 0.38rem,
+      transparent 0.42rem
+    ),
+    radial-gradient(
+      circle at 29% 21%,
+      rgba(127, 0, 0, 0.95) 0 0.34rem,
+      transparent 0.39rem
+    ),
+    radial-gradient(
+      circle at 52% 25%,
+      rgba(185, 28, 28, 0.9) 0 0.3rem,
+      transparent 0.36rem
+    );
+  filter: drop-shadow(0 0 10px rgba(127, 0, 0, 0.5));
+}
+
+.headline-blood-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 4.2rem;
+  width: 0.38rem;
+  height: 3.7rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(220, 38, 38, 0.95),
+    rgba(69, 10, 10, 0.08)
+  );
+  box-shadow: 7.2rem 0.55rem 0 -0.04rem rgba(127, 0, 0, 0.82),
+    14.6rem -0.1rem 0 -0.07rem rgba(185, 28, 28, 0.75),
+    22.8rem 0.7rem 0 -0.1rem rgba(127, 0, 0, 0.68);
+}
+
+.headline-blood-overlay::after {
+  content: "";
+  position: absolute;
+  top: 3.9rem;
+  left: 4.05rem;
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 999px;
+  background: rgba(127, 0, 0, 0.88);
+  box-shadow: 7.2rem 0.55rem 0 -0.08rem rgba(127, 0, 0, 0.72),
+    14.6rem -0.2rem 0 -0.12rem rgba(185, 28, 28, 0.65),
+    22.8rem 0.7rem 0 -0.16rem rgba(127, 0, 0, 0.6);
 }
