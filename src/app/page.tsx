@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import ArchiveSection from "@/components/ArchiveSection";
 import HauntedMapPreview from "@/components/HauntedMapPreview";
 import HauntingCallSection from "@/components/HauntingCallSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <ArchiveSection />
       <HauntedMapPreview />
       <HauntingCallSection />
+      <Footer />
     </main>
   );
 }
