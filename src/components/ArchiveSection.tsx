@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { archiveCategories } from "@/data/homepage";
 
 export default function ArchiveSection() {
@@ -29,8 +30,9 @@ export default function ArchiveSection() {
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {archiveCategories.map((category, index) => (
-            <article
+            <Link
               key={category.title}
+              href={category.href}
               className="ornate-panel group rounded-[1.7rem] p-6 transition hover:-translate-y-1 hover:border-red-500/60"
             >
               <div className="relative z-10">
@@ -52,7 +54,7 @@ export default function ArchiveSection() {
                   {category.description}
                 </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
