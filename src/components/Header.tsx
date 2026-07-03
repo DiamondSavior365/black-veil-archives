@@ -6,8 +6,8 @@ export default function Header() {
           Black Veil Archives
         </p>
 
-        <h1 className="gold-text mt-2 text-2xl font-black uppercase tracking-[0.08em]">
-          {/* <h1 className="gold-text font-gothic mt-2 text-2xl font-black uppercase tracking-[0.08em]"> */}
+        {/* <h1 className="gold-text mt-2 text-2xl font-black uppercase tracking-[0.08em]"> */}
+        <h1 className="gold-text font-gothic mt-2 text-2xl font-black uppercase tracking-[0.08em]">
           Step Beyond the Veil
         </h1>
       </div>

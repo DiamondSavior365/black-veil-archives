@@ -8,9 +8,9 @@ export default function HeroSection() {
           You enter. The archive watches.
         </div>
 
-        <h2 className="poster-heading max-w-4xl text-5xl font-black uppercase leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-7xl">
-          {/* <h2 className="poster-heading font-nosifer max-w-4xl text-5xl font-black uppercase leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-7xl"> */}
-          {/* <h2 className="poster-heading font-gothic max-w-4xl text-5xl font-black uppercase leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-7xl"> */}
+        {/* <h2 className="poster-heading max-w-4xl text-5xl font-black uppercase leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-7xl"> */}
+        {/* <h2 className="poster-heading font-nosifer max-w-4xl text-5xl font-black uppercase leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-7xl"> */}
+        <h2 className="poster-heading font-gothic max-w-4xl text-5xl font-black uppercase leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-7xl">
           A horror archive for what waits{" "}
           <span className="blood-text block">in the dark.</span>
         </h2>
